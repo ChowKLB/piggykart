@@ -1,6 +1,6 @@
 databases:
-  - name: maybe
-    user: maybe
+  - name: piggykart
+    user: piggykart
     plan: free
 
 services:
@@ -9,7 +9,7 @@ services:
     autoDeploy: false
     runtime: ruby
     name: maybe
-    repo: https://github.com/maybe-finance/maybe.git
+    repo: https://github.com/ChowKLB/piggykart.git
     branch: main
     healthCheckPath: /up
     buildCommand: "./bin/render-build.sh"
@@ -41,9 +41,9 @@ services:
       # The app uses this info to know which repo to fetch latest commit data from for upgrades
       # This should MATCH the `repo` and `branch` keys in the config above ALWAYS
       - key: GITHUB_REPO_OWNER
-        value: maybe-finance
+        value: ChowKLB
       - key: GITHUB_REPO_NAME
-        value: maybe
+        value: piggykart
       - key: GITHUB_REPO_BRANCH
         value: main
 
