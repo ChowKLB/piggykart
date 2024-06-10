@@ -1,4 +1,4 @@
-module piggykart
+module Maybe
   class << self
     def version
       Semver.new(semver)
