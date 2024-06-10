@@ -10,7 +10,7 @@ namespace :demo_data do
     family.tags.delete_all
     Transaction::Category.create_default_categories(family)
 
-    user = User.find_or_create_by(email: "user@piggykart.local") do |u|
+    user = User.find_or_create_by(email: "user@maybe.local") do |u|
       u.password = "password"
       u.family = family
       u.first_name = "User"

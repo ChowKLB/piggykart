@@ -12,24 +12,24 @@ class UpgradeTest < ActiveSupport::TestCase
   end
 
   test "available if latest commit and app not upgraded" do
-    piggykart.stubs(:version).returns(@commit_upgrade.version)
-    piggykart.stubs(:commit_sha).returns("outdatedcommitsha")
+    Maybe.stubs(:version).returns(@commit_upgrade.version)
+    Maybe.stubs(:commit_sha).returns("outdatedcommitsha")
 
     assert @commit_upgrade.available?
     assert_not @release_upgrade.available?
   end
 
   test "available if latest release and app not upgraded" do
-    piggykart.stubs(:version).returns(Semver.new("0.1.0-alpha.1"))
-    piggykart.stubs(:commit_sha).returns("outdatedcommitsha")
+    Maybe.stubs(:version).returns(Semver.new("0.1.0-alpha.1"))
+    Maybe.stubs(:commit_sha).returns("outdatedcommitsha")
 
     assert @commit_upgrade.available?
     assert @release_upgrade.available?
   end
 
   test "not available if app commit greater or equal to" do
-    piggykart.stubs(:version).returns(@commit_upgrade.version)
-    piggykart.stubs(:commit_sha).returns(@commit_upgrade.commit_sha)
+    Maybe.stubs(:version).returns(@commit_upgrade.version)
+    Maybe.stubs(:commit_sha).returns(@commit_upgrade.commit_sha)
 
     assert_not @commit_upgrade.available?
   end

@@ -1,4 +1,4 @@
-# Self Hosting piggykart with Docker
+# Self Hosting Maybe with Docker
 
 ## Quick Start
 
@@ -10,11 +10,11 @@ setup your local environment:
 
 ```bash
 # Create a directory on your computer for Docker files
-mkdir -p ~/docker-apps/piggykart
-cd ~/docker-apps/piggykart
+mkdir -p ~/docker-apps/maybe
+cd ~/docker-apps/maybe
 
-# Download the sample docker-compose.yml file from the piggykart Github repository
-curl -o docker-compose.yml https://raw.githubusercontent.com/ChowKLB/piggykart/main/docker-compose.example.yml
+# Download the sample docker-compose.yml file from the Maybe Github repository
+curl -o docker-compose.yml https://raw.githubusercontent.com/maybe-finance/maybe/main/docker-compose.example.yml
 
 # Create an .env file (make sure to fill in empty variables manually)
 cat << EOF > .env
@@ -48,7 +48,7 @@ account**, and you're ready to start tracking your finances!
 ### App Setup
 
 1. Create a new directory on your machine (we suggest something like
-   `$HOME/docker-apps/piggykart`)
+   `$HOME/docker-apps/maybe`)
 2. Create a `docker-compose.yml` file (we suggest
    using [our example](/docker-compose.example.yml)
    if
@@ -59,25 +59,25 @@ account**, and you're ready to start tracking your finances!
 
 ### Run app with Docker Compose
 
-1. Run `docker-compose up -d` to start the piggykart app in detached mode.
-2. Access the piggykart app by navigating to http://localhost:3000 in your web
+1. Run `docker-compose up -d` to start the maybe app in detached mode.
+2. Access the Maybe app by navigating to http://localhost:3000 in your web
    browser.
 
 ### Updating the App
 
-The mechanism that updates your self-hosted piggykart app is the GHCR (Github
+The mechanism that updates your self-hosted Maybe app is the GHCR (Github
 Container Registry) Docker image that you see in the `docker-compose.yml` file:
 
 ```yml
-image: ghcr.io/ChowKLB/piggykart:latest
+image: ghcr.io/maybe-finance/maybe:latest
 ```
 
 We recommend using one of the following images, but you can pin your app to
 whatever version you'd like (
-see [packages](https://github.com/ChowKLB/piggykart/pkgs/container/piggykart)):
+see [packages](https://github.com/maybe-finance/maybe/pkgs/container/maybe)):
 
-- `ghcr.io/ChowKLB/piggykart:latest` (latest commit)
-- `ghcr.io/ChowKLB/piggykart:stable` (latest release)
+- `ghcr.io/maybe-finance/maybe:latest` (latest commit)
+- `ghcr.io/maybe-finance/maybe:stable` (latest release)
 
 By default, your app _will NOT_ automatically update. To update your
 self-hosted app, you must run the following commands:
@@ -94,7 +94,7 @@ If you'd like to pin the app to a specific version or tag, all you need to do is
 edit the `docker-compose.yml` file:
 
 ```yml
-image: ghcr.io/ChowKLB/piggykart:stable
+image: ghcr.io/maybe-finance/maybe:stable
 ```
 
 ## Troubleshooting

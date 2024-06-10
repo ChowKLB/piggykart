@@ -5,7 +5,7 @@ class TransactionTest < ActiveSupport::TestCase
     @transaction = transactions(:checking_one)
   end
 
-  # See: https://github.com/ChowKLB/piggykart/wiki/vision#signage-of-money
+  # See: https://github.com/maybe-finance/maybe/wiki/vision#signage-of-money
   test "negative amounts are inflows, positive amounts are outflows to an account" do
     inflow_transaction = transactions(:checking_four)
     outflow_transaction = transactions(:checking_five)
