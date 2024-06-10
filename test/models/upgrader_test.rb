@@ -13,8 +13,8 @@ class UpgraderTest < ActiveSupport::TestCase
   setup do
     Upgrader.config = Upgrader::Config.new({ mode: :enabled })
 
-    Maybe.stubs(:version).returns(CURRENT_VERSION)
-    Maybe.stubs(:commit_sha).returns(CURRENT_COMMIT)
+    Piggykart.stubs(:version).returns(CURRENT_VERSION)
+    Piggykart.stubs(:commit_sha).returns(CURRENT_COMMIT)
 
     stub_github_data(
       commit: create_upgrade_stub(CURRENT_VERSION, CURRENT_COMMIT),
@@ -38,8 +38,8 @@ class UpgraderTest < ActiveSupport::TestCase
   end
 
   test "when app is behind latest version and latest commit is ahead of release finds release upgrade and no completed upgrades" do
-    Maybe.stubs(:version).returns(PRIOR_VERSION)
-    Maybe.stubs(:commit_sha).returns(PRIOR_COMMIT)
+    Piggykart.stubs(:version).returns(PRIOR_VERSION)
+    Piggykart.stubs(:commit_sha).returns(PRIOR_COMMIT)
 
     stub_github_data(
       commit: create_upgrade_stub(CURRENT_VERSION, NEXT_COMMIT),

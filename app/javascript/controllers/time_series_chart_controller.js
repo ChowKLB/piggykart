@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import tailwindColors from "@maybe/tailwindcolors"
+import tailwindColors from "@piggykart/tailwindcolors"
 import * as d3 from "d3"
 
 export default class extends Controller {

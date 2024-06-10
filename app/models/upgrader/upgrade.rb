@@ -9,12 +9,12 @@ class Upgrader::Upgrade
   end
 
   def complete?
-    commit_sha == Maybe.commit_sha
+    commit_sha == Piggykart.commit_sha
   end
 
   def available?
-    return false if commit_sha == Maybe.commit_sha || version < Maybe.version
-    return false if version == Maybe.version && type == "release"
+    return false if commit_sha == Piggykart.commit_sha || version < Piggykart.version
+    return false if version == Piggykart.version && type == "release"
     true
   end
 
