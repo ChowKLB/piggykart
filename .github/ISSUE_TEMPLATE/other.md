@@ -9,8 +9,8 @@ assignees: ''
 
 **PLEASE READ before opening an issue:**
 
-- Is this a feature request?  Please [open a feature request discussion](https://github.com/maybe-finance/maybe/discussions/new?category=feature-requests).
-- Do you need help or have a question?  Please [open a discussion](https://github.com/maybe-finance/maybe/discussions/new/choose) or [join our Discord](https://link.maybe.co/discord) and post to the "help" channel.
+- Is this a feature request?  Please [open a feature request discussion](https://github.com/ChowKLB/piggykart/discussions/new?category=feature-requests).
+- Do you need help or have a question?  Please [open a discussion](https://github.com/ChowKLB/piggykart/discussions/new/choose) or [join our Discord](https://link.piggykart.co/discord) and post to the "help" channel.
 
 ----------------------
 
