@@ -27,7 +27,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_DB: ${POSTGRES_DB:-maybe_production}
+      POSTGRES_DB: ${POSTGRES_DB:-piggykart_production}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U $$POSTGRES_USER" ]
