@@ -16,8 +16,8 @@ permissions:
   contents: read
 
 jobs:
-  # ci:
-  #   uses: ./.github/workflows/ci.yml
+  ci:
+    uses: ./.github/workflows/ci.yml
 
   build:
     name: Build docker image
@@ -45,7 +45,6 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Extract metadata for Docker
         id: meta
         uses: docker/metadata-action@v5
