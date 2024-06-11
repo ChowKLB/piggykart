@@ -16,8 +16,8 @@ permissions:
   contents: read
 
 jobs:
-  ci:
-    uses: ./.github/workflows/ci.yml
+  # ci:
+  #   uses: ./.github/workflows/ci.yml
 
   build:
     name: Build docker image
@@ -64,7 +64,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: v1 
+          # ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           cache-from: type=gha
