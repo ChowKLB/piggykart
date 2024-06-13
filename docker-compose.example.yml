@@ -5,7 +5,7 @@ services:
     volumes:
       - ./storage:/rails/storage
     ports:
-      - 127.0.0.1:3000:3000
+      - 54.161.240.192:3000:3000
     restart: unless-stopped
     env_file:
       - .env
